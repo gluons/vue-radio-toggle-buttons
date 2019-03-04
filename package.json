@@ -1,0 +1,44 @@
+{
+  "name": "vue-radio-toggle-switch",
+  "version": "0.0.1",
+  "description": "Radio toggle switch for Vue.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gluons/vue-radio-toggle-switch.git"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "vue-component",
+    "radio",
+    "radio-buttons",
+    "toggle",
+    "toggle-switch",
+    "toggle-buttons"
+  ],
+  "author": "Saran Tanpituckpong <sarunta@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/gluons/vue-radio-toggle-switch/issues"
+  },
+  "homepage": "https://github.com/gluons/vue-radio-toggle-switch",
+  "peerDependencies": {
+    "vue": "2"
+  },
+  "devDependencies": {
+    "@gluons/prettier-config": "^2.0.0",
+    "@gluons/vue-up": "^0.4.3",
+    "prettier": "^1.16.4",
+    "tsconfig-gluons": "^1.0.1",
+    "tslint": "^5.13.1",
+    "tslint-config-gluons": "^2.1.0",
+    "typescript": "^3.3.3333",
+    "vue": "^2.6.8",
+    "vue-class-component": "^7.0.1",
+    "vue-property-decorator": "^7.3.0",
+    "vue-template-compiler": "^2.6.8"
+  }
+}

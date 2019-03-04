@@ -1,0 +1,10 @@
+{
+	"extends": "tsconfig-gluons",
+	"compilerOptions": {
+		"module": "esnext",
+		"lib": ["dom"],
+		"experimentalDecorators": true,
+		"outDir": "dist"
+	},
+	"include": ["src"]
+}
