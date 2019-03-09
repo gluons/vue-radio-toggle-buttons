@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Radio toggle switch for Vue.",
   "scripts": {
+    "dev": "vue-up dev",
+    "prebuild": "rimraf dist/*",
+    "build": "vue-up",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
@@ -29,10 +32,15 @@
     "vue": "2"
   },
   "devDependencies": {
+    "@babel/core": "^7.3.4",
     "@gluons/prettier-config": "^2.0.0",
-    "@gluons/vue-up": "^0.4.3",
+    "@gluons/vue-up": "^0.5.0",
+    "@types/jest": "^24.0.11",
     "@types/node": "6",
+    "babel-core": "^7.0.0-bridge.0",
+    "jest": "^24.3.1",
     "prettier": "^1.16.4",
+    "rimraf": "^2.6.3",
     "tsconfig-gluons": "^1.0.1",
     "tslint": "^5.13.1",
     "tslint-config-gluons": "^2.1.0",
