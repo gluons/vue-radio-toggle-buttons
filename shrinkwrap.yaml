@@ -5,6 +5,7 @@ devDependencies:
   '@types/jest': 24.0.11
   '@types/node': 6.14.4
   babel-core: 7.0.0-bridge.0
+  csstype: 2.6.3
   jest: 24.3.1
   prettier: 1.16.4
   rimraf: 2.6.3
@@ -2369,6 +2370,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-7DYm8qe+gPx/h77QlCyFmX80+fGaE/6A/Ekl0zaszYOubvySO2saYFdQ78P29D0UsULxFKCetDGNaNRUdSF+2A==
+  /csstype/2.6.3:
+    dev: true
+    resolution:
+      integrity: sha512-rINUZXOkcBmoHWEyu7JdHu5JMzkGRoMX4ov9830WNgxf5UYxcBUO0QTKAqeJ5EZfSdlrcJYkC8WwfVW7JYi4yg==
   /currently-unhandled/0.4.1:
     dependencies:
       array-find-index: 1.0.2
@@ -9210,6 +9215,7 @@ specifiers:
   '@types/jest': ^24.0.11
   '@types/node': '6'
   babel-core: ^7.0.0-bridge.0
+  csstype: ^2.6.3
   jest: ^24.3.1
   prettier: ^1.16.4
   rimraf: ^2.6.3
