@@ -1,0 +1,45 @@
+$radius: 3px;
+$border-color: #ccc;
+$text-color: #000;
+$selected-bg-color: #333;
+$hover-color: $selected-bg-color;
+$selected-text-color: #fff;
+$selected-hover-color: #555;
+
+.radio-toggle-button {
+	position: relative;
+	cursor: pointer;
+	color: $text-color;
+	border: 1px solid $border-color;
+	border-collapse: collapse;
+	padding: 10px;
+	z-index: 1;
+
+	input[type='radio'] {
+		display: none;
+	}
+	& + & {
+		margin-left: -1px;
+	}
+	&:first-of-type {
+		border-radius: $radius 0 0 $radius;
+	}
+	&:last-of-type {
+		border-radius: 0 $radius $radius 0;
+	}
+	&:hover {
+		border-color: $hover-color;
+		z-index: 2;
+	}
+	&.is-selected {
+		color: $selected-text-color;
+		background-color: $selected-bg-color;
+		border-color: $selected-bg-color;
+		z-index: 2;
+
+		&:hover {
+			background-color: $selected-hover-color;
+			border-color: $selected-hover-color;
+		}
+	}
+}
