@@ -1,6 +1,7 @@
 <template lang="pug">
 label.radio-toggle-button(
 	:class='classes'
+	:style='style'
 	@mouseover='onMouseOver'
 	@mouseout='onMouseOut'
 )
@@ -13,7 +14,13 @@ label.radio-toggle-button(
 </template>
 
 <script lang="ts">
+import Color from 'color';
+import { StandardProperties } from 'csstype';
 import { Vue, Component, Prop, Watch } from 'vue-property-decorator';
+
+import calculateColors from '../lib/calculateColors';
+
+const defaultColor = '#333';
 
 @Component({
 	name: 'RadioToggle',
@@ -24,6 +31,20 @@ import { Vue, Component, Prop, Watch } from 'vue-property-decorator';
 export default class RadioToggle extends Vue {
 	@Prop(String) value: string;
 	@Prop() mValue: any;
+	@Prop({
+		type: String,
+		default: defaultColor,
+		validator(value) {
+			try {
+				Color(value);
+
+				return true;
+			} catch (_) {
+				return false;
+			}
+		}
+	})
+	color: string;
 
 	currentValue: any = this.mValue; // Represent current value of all radio buttons in group
 	isHovered: boolean = false;
@@ -52,6 +73,26 @@ export default class RadioToggle extends Vue {
 			'is-selected': this.isSelected,
 			'is-hovered': this.isHovered
 		};
+	}
+	get style() {
+		const { color, isSelected, isHovered } = this;
+		const {
+			textColor,
+			borderColor,
+			selectedTextColor,
+			selectedBgColor,
+			selectedHoverColor
+		} = calculateColors(color);
+		const actualBorderColor = isHovered ? selectedBgColor : borderColor;
+		const actualSelectedBorderColor = isHovered ? selectedHoverColor : selectedBgColor;
+		const actualSelectedBgColor = isHovered ? selectedHoverColor : selectedBgColor;
+		const styles: StandardProperties = {
+			color: isSelected ? selectedTextColor : textColor,
+			borderColor: isSelected ? actualSelectedBorderColor : actualBorderColor,
+			backgroundColor: isSelected ? actualSelectedBgColor : null,
+		};
+
+		return styles;
 	}
 
 	// Catch this component's v-model change

@@ -1,16 +1,12 @@
 $radius: 3px;
-$border-color: #ccc;
-$text-color: #000;
-$selected-bg-color: #333;
-$hover-color: $selected-bg-color;
-$selected-text-color: #fff;
-$selected-hover-color: #555;
 
 label.radio-toggle-button {
 	position: relative;
 	cursor: pointer;
-	color: $text-color;
-	border: 1px solid $border-color;
+	border: {
+		width: 1px;
+		style: solid;
+	};
 	border-collapse: collapse;
 	padding: 10px;
 	transition: border 0.3s ease-in-out, background-color 0.3s ease;
@@ -30,19 +26,9 @@ label.radio-toggle-button {
 	}
 	&:hover,
 	&.is-hovered {
-		border-color: $hover-color;
 		z-index: 2;
 	}
 	&.is-selected {
-		color: $selected-text-color;
-		background-color: $selected-bg-color;
-		border-color: $selected-bg-color;
 		z-index: 2;
-
-		&:hover,
-		&.is-hovered {
-			background-color: $selected-hover-color;
-			border-color: $selected-hover-color;
-		}
 	}
 }

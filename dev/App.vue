@@ -1,13 +1,17 @@
 <template lang="pug">
 #demo
-	.radio-buttons
-		Radio(value='a' v-model='value') AAAAA
-		Radio(value='b' v-model='value') BBBBB
-		Radio(value='c' v-model='value') CCCCC
+	.radio-buttons(
+		v-for='color in colors'
+		:key='color'
+	)
+		Radio(v-model='value' value='a' :color='color') AAAAA
+		Radio(v-model='value' value='b' :color='color') BBBBB
+		Radio(v-model='value' value='c' :color='color') CCCCC
 	p.result {{ value }}
 </template>
 
 <script lang="ts">
+import randomColor from 'randomcolor';
 import { Vue, Component } from 'vue-property-decorator';
 
 @Component({
@@ -15,6 +19,7 @@ import { Vue, Component } from 'vue-property-decorator';
 })
 export default class App extends Vue {
 	value: string = 'b';
+	colors: string[] = randomColor({ count: 10 });
 }
 </script>
 

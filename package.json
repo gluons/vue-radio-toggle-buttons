@@ -35,12 +35,14 @@
     "@babel/core": "^7.3.4",
     "@gluons/prettier-config": "^2.0.0",
     "@gluons/vue-up": "^0.5.0",
+    "@types/color": "^3.0.0",
     "@types/jest": "^24.0.11",
     "@types/node": "6",
     "babel-core": "^7.0.0-bridge.0",
     "csstype": "^2.6.3",
     "jest": "^24.3.1",
     "prettier": "^1.16.4",
+    "randomcolor": "^0.5.4",
     "rimraf": "^2.6.3",
     "tsconfig-gluons": "^1.0.1",
     "tslint": "^5.13.1",
@@ -50,5 +52,8 @@
     "vue-class-component": "^7.0.1",
     "vue-property-decorator": "^7.3.0",
     "vue-template-compiler": "^2.6.8"
+  },
+  "dependencies": {
+    "color": "^3.1.0"
   }
 }
