@@ -1,10 +1,10 @@
 <template lang="pug">
 #demo
-	#radio-buttons
+	.radio-buttons
 		Radio(value='a' v-model='value') AAAAA
 		Radio(value='b' v-model='value') BBBBB
 		Radio(value='c' v-model='value') CCCCC
-	p#result {{ value }}
+	p.result {{ value }}
 </template>
 
 <script lang="ts">
@@ -14,7 +14,7 @@ import { Vue, Component } from 'vue-property-decorator';
 	name: 'App'
 })
 export default class App extends Vue {
-	value: string = 'a';
+	value: string = 'b';
 }
 </script>
 
@@ -23,10 +23,10 @@ body {
 	padding: 1rem;
 }
 #demo {
-	#radio-buttons {
+	.radio-buttons {
 		margin: 2rem 0;
 	}
-	#result {
+	.result {
 		font-family: serif;
 		font-size: 20px;
 		padding: 1rem;

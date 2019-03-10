@@ -6,13 +6,14 @@ $hover-color: $selected-bg-color;
 $selected-text-color: #fff;
 $selected-hover-color: #555;
 
-.radio-toggle-button {
+label.radio-toggle-button {
 	position: relative;
 	cursor: pointer;
 	color: $text-color;
 	border: 1px solid $border-color;
 	border-collapse: collapse;
 	padding: 10px;
+	transition: border 0.3s ease-in-out, background-color 0.3s ease;
 	z-index: 1;
 
 	input[type='radio'] {
@@ -27,7 +28,8 @@ $selected-hover-color: #555;
 	&:last-of-type {
 		border-radius: 0 $radius $radius 0;
 	}
-	&:hover {
+	&:hover,
+	&.is-hovered {
 		border-color: $hover-color;
 		z-index: 2;
 	}
@@ -37,7 +39,8 @@ $selected-hover-color: #555;
 		border-color: $selected-bg-color;
 		z-index: 2;
 
-		&:hover {
+		&:hover,
+		&.is-hovered {
 			background-color: $selected-hover-color;
 			border-color: $selected-hover-color;
 		}

@@ -1,6 +1,8 @@
 <template lang="pug">
 label.radio-toggle-button(
-	:class='{ "is-selected": isSelected }'
+	:class='classes'
+	@mouseover='onMouseOver'
+	@mouseout='onMouseOut'
 )
 	input(
 		type='radio'
@@ -23,8 +25,15 @@ export default class RadioToggle extends Vue {
 	@Prop(String) value: string;
 	@Prop() mValue: any;
 
-	// Represent current value of all radio buttons in group
-	currentValue: any = this.mValue;
+	currentValue: any = this.mValue; // Represent current value of all radio buttons in group
+	isHovered: boolean = false;
+
+	onMouseOver() {
+		this.isHovered = true;
+	}
+	onMouseOut() {
+		this.isHovered = false;
+	}
 
 	// For internal radio's v-model
 	get computedValue() {
@@ -37,6 +46,12 @@ export default class RadioToggle extends Vue {
 	}
 	get isSelected() {
 		return this.currentValue === this.value;
+	}
+	get classes() {
+		return {
+			'is-selected': this.isSelected,
+			'is-hovered': this.isHovered
+		};
 	}
 
 	// Catch this component's v-model change
