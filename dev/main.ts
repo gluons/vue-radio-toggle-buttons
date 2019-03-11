@@ -2,10 +2,10 @@
 
 import Vue from 'vue';
 
-import VueRadioToggleSwitch from '../src';
+import VueRadioToggleButtons from '../src';
 import App from './App.vue';
 
-Vue.use(VueRadioToggleSwitch);
+Vue.use(VueRadioToggleButtons);
 
 new Vue({
 	el: '#app',

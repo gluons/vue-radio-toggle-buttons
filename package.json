@@ -1,7 +1,7 @@
 {
-  "name": "vue-radio-toggle-switch",
+  "name": "vue-radio-toggle-buttons",
   "version": "0.0.1",
-  "description": "Radio toggle switch for Vue.",
+  "description": "Radio toggle buttons for Vue.",
   "scripts": {
     "dev": "vue-up dev",
     "prebuild": "rimraf dist/*",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gluons/vue-radio-toggle-switch.git"
+    "url": "git+https://github.com/gluons/vue-radio-toggle-buttons.git"
   },
   "keywords": [
     "vue",
@@ -25,9 +25,9 @@
   "author": "Saran Tanpituckpong <sarunta@gmail.com>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/gluons/vue-radio-toggle-switch/issues"
+    "url": "https://github.com/gluons/vue-radio-toggle-buttons/issues"
   },
-  "homepage": "https://github.com/gluons/vue-radio-toggle-switch",
+  "homepage": "https://github.com/gluons/vue-radio-toggle-buttons",
   "peerDependencies": {
     "vue": "2"
   },
