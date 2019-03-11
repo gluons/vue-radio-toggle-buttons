@@ -10,4 +10,8 @@ const VueRadioToggleButtons: PluginObject<void> = {
 	}
 };
 
+VueRadioToggleButtons.components = {
+	RadioToggleButtons
+};
+
 export default VueRadioToggleButtons;
