@@ -74,6 +74,7 @@ export default class RadioToggle extends Vue {
 		};
 
 		if (isHovered) {
+			styles.color = color;
 			styles.borderColor = color;
 		}
 		if (isSelected) {

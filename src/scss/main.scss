@@ -6,7 +6,11 @@ label.radio-toggle-button {
 	border: 1px solid #ccc;
 	border-collapse: collapse;
 	padding: 10px;
-	transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+	transition: {
+		property: color, border, background-color;
+		duration: 0.3s;
+		timing-function: ease-in-out;
+	}
 	z-index: 0;
 
 		input[type='radio'] {
