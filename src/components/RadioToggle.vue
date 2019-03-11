@@ -18,9 +18,11 @@ import Color from 'color';
 import { StandardProperties } from 'csstype';
 import { Vue, Component, Prop, Watch } from 'vue-property-decorator';
 
-import calculateColors from '../lib/calculateColors';
+import isColor from '../lib/isColor';
 
 const defaultColor = '#333';
+const defaultTextColor = defaultColor;
+const defaultSelectedTextColor = '#eee';
 
 @Component({
 	name: 'RadioToggle',
@@ -31,20 +33,16 @@ const defaultColor = '#333';
 export default class RadioToggle extends Vue {
 	@Prop(String) value: string;
 	@Prop() mValue: any;
+	@Prop({ type: String, default: defaultColor, validator: isColor })
+	color: string;
+	@Prop({ type: String, default: defaultTextColor, validator: isColor })
+	textColor: string;
 	@Prop({
 		type: String,
-		default: defaultColor,
-		validator(value) {
-			try {
-				Color(value);
-
-				return true;
-			} catch (_) {
-				return false;
-			}
-		}
+		default: defaultSelectedTextColor,
+		validator: isColor
 	})
-	color: string;
+	selectedTextColor: string;
 
 	currentValue: any = this.mValue; // Represent current value of all radio buttons in group
 	isHovered: boolean = false;
@@ -75,22 +73,35 @@ export default class RadioToggle extends Vue {
 		};
 	}
 	get style() {
-		const { color, isSelected, isHovered } = this;
 		const {
+			color,
 			textColor,
-			borderColor,
 			selectedTextColor,
-			selectedBgColor,
-			selectedHoverColor
-		} = calculateColors(color);
-		const actualBorderColor = isHovered ? selectedBgColor : borderColor;
-		const actualSelectedBorderColor = isHovered ? selectedHoverColor : selectedBgColor;
-		const actualSelectedBgColor = isHovered ? selectedHoverColor : selectedBgColor;
+			isHovered,
+			isSelected
+		} = this;
+		const mainColor = Color(color);
+		const hoverColor = mainColor.isDark()
+			? mainColor.lighten(0.5).string()
+			: mainColor.darken(0.3).string();
 		const styles: StandardProperties = {
-			color: isSelected ? selectedTextColor : textColor,
-			borderColor: isSelected ? actualSelectedBorderColor : actualBorderColor,
-			backgroundColor: isSelected ? actualSelectedBgColor : null,
+			color: textColor
 		};
+
+		if (isHovered) {
+			styles.borderColor = color;
+		}
+		if (isSelected) {
+			styles.color = selectedTextColor;
+
+			if (isHovered) {
+				styles.backgroundColor = hoverColor;
+				styles.borderColor = hoverColor;
+			} else {
+				styles.backgroundColor = color;
+				styles.borderColor = color;
+			}
+		}
 
 		return styles;
 	}

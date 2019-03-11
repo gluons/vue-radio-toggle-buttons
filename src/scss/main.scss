@@ -3,16 +3,13 @@ $radius: 3px;
 label.radio-toggle-button {
 	position: relative;
 	cursor: pointer;
-	border: {
-		width: 1px;
-		style: solid;
-	};
+	border: 1px solid #ccc;
 	border-collapse: collapse;
 	padding: 10px;
-	transition: border 0.3s ease-in-out, background-color 0.3s ease;
-	z-index: 1;
+	transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+	z-index: 0;
 
-	input[type='radio'] {
+		input[type='radio'] {
 		display: none;
 	}
 	& + & {
@@ -26,7 +23,7 @@ label.radio-toggle-button {
 	}
 	&:hover,
 	&.is-hovered {
-		z-index: 2;
+		z-index: 1;
 	}
 	&.is-selected {
 		z-index: 2;
