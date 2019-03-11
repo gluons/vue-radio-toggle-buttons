@@ -16,8 +16,10 @@
     "dev": "vue-up dev",
     "prebuild": "rimraf dist/*",
     "build": "vue-up",
+    "format": "prettier --write \"{dev,src,test}/**\"",
+    "lint": "tslint -p .",
     "pretest": "npm run build",
-    "test": "jest --verbose"
+    "test": "npm run lint && jest --verbose"
   },
   "repository": {
     "type": "git",
