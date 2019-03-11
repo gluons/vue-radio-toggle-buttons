@@ -1,12 +1,12 @@
 import { PluginObject } from 'vue';
 
-import RadioToggle from './components/RadioToggle.vue';
+import RadioToggleButtons from './components/RadioToggleButtons.vue';
 
 import './scss/main.scss';
 
 const VueRadioToggleButtons: PluginObject<void> = {
 	install(Vue) {
-		Vue.component('Radio', RadioToggle);
+		Vue.component('RadioToggleButtons', RadioToggleButtons);
 	}
 };
 

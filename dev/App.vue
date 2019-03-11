@@ -1,28 +1,18 @@
 <template lang="pug">
 #demo
+	.radio-buttons
+		RadioToggleButtons(v-model='currentValue' :values='values')
 	.radio-buttons(
 		v-for='(color, i) in colors'
 		:key='color'
 	)
-		Radio(
-			v-model='value'
-			value='a'
+		RadioToggleButtons(
+			v-model='currentValue'
+			:values='values'
 			:color='color'
 			:selectedTextColor='selectedTextColors[i]'
-		) AAAAA
-		Radio(
-			v-model='value'
-			value='b'
-			:color='color'
-			:selectedTextColor='selectedTextColors[i]'
-		) BBBBB
-		Radio(
-			v-model='value'
-			value='c'
-			:color='color'
-			:selectedTextColor='selectedTextColors[i]'
-		) CCCCC
-	p.result {{ value }}
+		)
+	p.result {{ currentValue }}
 </template>
 
 <script lang="ts">
@@ -30,17 +20,21 @@ import Color from 'color';
 import randomColor from 'randomcolor';
 import { Vue, Component } from 'vue-property-decorator';
 
+const preValues = ['a', 'b', 'c'];
+
 @Component({
 	name: 'App'
 })
 export default class App extends Vue {
-	value: string = 'b';
+	values = preValues.map(value => ({
+		label: value.repeat(5).toUpperCase(),
+		value
+	}));
+	currentValue: string = 'b';
 	colors: string[] = randomColor({ count: 10 });
 
 	get selectedTextColors() {
-		const { colors } = this;
-
-		return colors.map(color => {
+		return this.colors.map(color => {
 			const isDark = Color(color).isDark();
 
 			return isDark ? '#eee' : '#333';

@@ -16,33 +16,18 @@ label.radio-toggle-button(
 <script lang="ts">
 import Color from 'color';
 import { StandardProperties } from 'csstype';
-import { Vue, Component, Prop, Watch } from 'vue-property-decorator';
-
-import isColor from '../lib/isColor';
-
-const defaultColor = '#333';
-const defaultTextColor = defaultColor;
-const defaultSelectedTextColor = '#eee';
+import { Vue, Component, Prop, Model, Watch } from 'vue-property-decorator';
 
 @Component({
-	name: 'RadioToggle',
-	model: {
-		prop: 'mValue'
-	}
+	name: 'RadioToggle'
 })
 export default class RadioToggle extends Vue {
+	@Model() mValue: any;
+
 	@Prop(String) value: string;
-	@Prop() mValue: any;
-	@Prop({ type: String, default: defaultColor, validator: isColor })
-	color: string;
-	@Prop({ type: String, default: defaultTextColor, validator: isColor })
-	textColor: string;
-	@Prop({
-		type: String,
-		default: defaultSelectedTextColor,
-		validator: isColor
-	})
-	selectedTextColor: string;
+	@Prop(String) color: string;
+	@Prop(String) textColor: string;
+	@Prop(String) selectedTextColor: string;
 
 	currentValue: any = this.mValue; // Represent current value of all radio buttons in group
 	isHovered: boolean = false;
