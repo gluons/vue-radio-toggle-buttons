@@ -2,6 +2,15 @@
   "name": "vue-radio-toggle-buttons",
   "version": "0.0.1",
   "description": "Radio toggle buttons for Vue.",
+  "main": "./dist/vue-radio-toggle-buttons.cjs.js",
+  "module": "./dist/vue-radio-toggle-buttons.es.js",
+  "jsdelivr": "./dist/vue-radio-toggle-buttons.web.min.js",
+  "unpkg": "./dist/vue-radio-toggle-buttons.web.min.js",
+  "style": "./dist/vue-radio-toggle-buttons.css",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "prepublishOnly": "npm run build",
     "dev": "vue-up dev",
