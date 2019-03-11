@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Radio toggle buttons for Vue.",
   "scripts": {
+    "prepublishOnly": "npm run build",
     "dev": "vue-up dev",
     "prebuild": "rimraf dist/*",
     "build": "vue-up",
