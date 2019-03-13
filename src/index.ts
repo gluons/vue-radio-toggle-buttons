@@ -10,6 +10,10 @@ const VueRadioToggleButtons: PluginObject<void> = {
 	}
 };
 
+if (window && window.Vue) {
+	VueRadioToggleButtons.install(window.Vue);
+}
+
 VueRadioToggleButtons.components = {
 	RadioToggleButtons
 };
