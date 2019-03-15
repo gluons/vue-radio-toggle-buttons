@@ -21,10 +21,10 @@ devDependencies:
   tslint: 5.14.0
   tslint-config-gluons: 2.1.0
   typescript: 3.3.3333
-  vue: 2.6.8
+  vue: 2.6.9
   vue-class-component: 7.0.1
-  vue-property-decorator: 7.3.0
-  vue-template-compiler: 2.6.8
+  vue-property-decorator: 8.0.0
+  vue-template-compiler: 2.6.9
 lockfileVersion: 5
 packages:
   /@babel/code-frame/7.0.0:
@@ -9377,10 +9377,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-wGavtYK7HLQSjWDqkjkulNXp2+w=
-  /vue-class-component/6.3.2:
-    dev: true
-    resolution:
-      integrity: sha512-cH208IoM+jgZyEf/g7mnFyofwPDJTM/QvBNhYMjqGB8fCsRyTf68rH2ISw/G20tJv+5mIThQ3upKwoL4jLTr1A==
   /vue-class-component/7.0.1:
     dev: true
     resolution:
@@ -9404,12 +9400,12 @@ packages:
       webpack: ^4.1.0 || ^5.0.0-0
     resolution:
       integrity: sha512-x+NZ4RIthQOxcFclEcs8sXGEWqnZHodL2J9Vq+hUz+TDZzBaDIh1j3d9M2IUlTjtrHTZy4uMuRdTi8BGws7jLA==
-  /vue-property-decorator/7.3.0:
+  /vue-property-decorator/8.0.0:
     dependencies:
-      vue-class-component: 6.3.2
+      vue-class-component: 7.0.1
     dev: true
     resolution:
-      integrity: sha512-HarXfTQ/Nxm4s/APpAaGIGHq5ZzslApImQy8ZrtkfGamw8rUFAVgMS5C50/AQ80+wfw3Wpnf4bNzbmj75m/k2Q==
+      integrity: sha512-aaAO/Wbh+n3sPMOoQ+Rwi9va6vFqZPX13dA8vMycGuS/DOIYC77KxX0gMAPEzzkT4Umya0uSlTvBV5jQvSTyBQ==
   /vue-runtime-helpers/1.0.0:
     dev: true
     resolution:
@@ -9421,21 +9417,21 @@ packages:
     dev: true
     resolution:
       integrity: sha512-0ip8ge6Gzz/Bk0iHovU9XAUQaFt/G2B61bnWa2tCcqqdgfHs1lF9xXorFbE55Gmy92okFT+8bfmySuUOu13vxQ==
-  /vue-template-compiler/2.6.8:
+  /vue-template-compiler/2.6.9:
     dependencies:
       de-indent: 1.0.2
       he: 1.2.0
     dev: true
     resolution:
-      integrity: sha512-SwWKANE5ee+oJg+dEJmsdxsxWYICPsNwk68+1AFjOS8l0O/Yz2845afuJtFqf3UjS/vXG7ECsPeHHEAD65Cjng==
+      integrity: sha512-QgO0LSCdeH6zUMSgtqel+yDWsZWQPXiWBdFg9qzOhWfQL8vZ+ywinAzE04rm1XrWc+3SU0YAdWISlEgs/i8WWA==
   /vue-template-es2015-compiler/1.9.1:
     dev: true
     resolution:
       integrity: sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
-  /vue/2.6.8:
+  /vue/2.6.9:
     dev: true
     resolution:
-      integrity: sha512-+vp9lEC2Kt3yom673pzg1J7T1NVGuGzO9j8Wxno+rQN2WYVBX2pyo/RGQ3fXCLh2Pk76Skw/laAPCuBuEQ4diw==
+      integrity: sha512-t1+tvH8hybPM86oNne3ZozCD02zj/VoZIiojOBPJLjwBn7hxYU5e1gBObFpq8ts1NEn1VhPf/hVXBDAJ3X5ljg==
   /w3c-hr-time/1.0.1:
     dependencies:
       browser-process-hrtime: 0.1.3
@@ -9895,7 +9891,7 @@ specifiers:
   tslint: ^5.13.1
   tslint-config-gluons: ^2.1.0
   typescript: ^3.3.3333
-  vue: ^2.6.8
+  vue: ^2.6.9
   vue-class-component: ^7.0.1
-  vue-property-decorator: ^7.3.0
-  vue-template-compiler: ^2.6.8
+  vue-property-decorator: ^8.0.0
+  vue-template-compiler: ^2.6.9
