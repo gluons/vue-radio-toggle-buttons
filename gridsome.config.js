@@ -19,7 +19,5 @@ module.exports = {
 					.options({
 						appendTsSuffixTo: [/\.vue$/]
 					});
-
-		console.log(config.toConfig());
 	}
 };
