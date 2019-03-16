@@ -14,6 +14,8 @@ devDependencies:
   tslint: 5.14.0
   tslint-config-gluons: 2.1.0
   typescript: 3.3.3333
+  vue-class-component: 7.0.1
+  vue-property-decorator: 8.0.0
   webpack: 4.29.6
 lockfileVersion: 5
 packages:
@@ -8106,6 +8108,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-wGavtYK7HLQSjWDqkjkulNXp2+w=
+  /vue-class-component/7.0.1:
+    dev: true
+    resolution:
+      integrity: sha512-YIihdl7YmceEOjSwcxLhCXCNA3TKC2FStuMcjtuzhUAgw5x5d1T5gZTmVQHGyOaQsaKffL4GlZzYN3dlMYl53w==
   /vue-hot-reload-api/2.3.3:
     dev: false
     resolution:
@@ -8134,6 +8140,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-cF/ADL1kA8Gn6wfSx0+kYIPAmJ49y9R0QlMS9tg5ddDDZWaZMZ0rveFWaTOKr0eabUV/H3D9ip68Xt9f5SFbyA==
+  /vue-property-decorator/8.0.0:
+    dependencies:
+      vue-class-component: 7.0.1
+    dev: true
+    resolution:
+      integrity: sha512-aaAO/Wbh+n3sPMOoQ+Rwi9va6vFqZPX13dA8vMycGuS/DOIYC77KxX0gMAPEzzkT4Umya0uSlTvBV5jQvSTyBQ==
   /vue-radio-toggle-buttons/0.0.2:
     dependencies:
       color: 3.1.0
@@ -8432,5 +8444,7 @@ specifiers:
   tslint-config-gluons: ^2.1.0
   typescript: ^3.3.3333
   vue: ^2.6.9
+  vue-class-component: ^7.0.1
+  vue-property-decorator: ^8.0.0
   vue-radio-toggle-buttons: ^0.0.2
   webpack: ^4.29.6

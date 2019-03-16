@@ -35,6 +35,8 @@
     "tslint": "^5.14.0",
     "tslint-config-gluons": "^2.1.0",
     "typescript": "^3.3.3333",
+    "vue-class-component": "^7.0.1",
+    "vue-property-decorator": "^8.0.0",
     "webpack": "^4.29.6"
   }
 }
