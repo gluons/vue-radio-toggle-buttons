@@ -13,7 +13,7 @@ module.exports = {
 					.end()
 				.end()
 			.rule('ts')
-				.test(/\/.ts$/)
+				.test(/\.ts$/)
 				.use('ts')
 					.loader('ts-loader')
 					.options({
