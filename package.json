@@ -1,0 +1,40 @@
+{
+  "name": "vue-radio-toggle-buttons-docs",
+  "version": "0.0.0",
+  "description": "Documentation website for Vue Radio Toggle Buttons.",
+  "private": true,
+  "scripts": {
+    "dev": "gridsome develop",
+    "build": "gridsome build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gluons/vue-radio-toggle-buttons.git"
+  },
+  "keywords": [],
+  "author": "Saran Tanpituckpong <sarunta@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gluons/vue-radio-toggle-buttons/issues"
+  },
+  "homepage": "https://github.com/gluons/vue-radio-toggle-buttons",
+  "dependencies": {
+    "gridsome": "^0.5.5",
+    "vue": "^2.6.9",
+    "vue-radio-toggle-buttons": "^0.0.2"
+  },
+  "devDependencies": {
+    "@gluons/prettier-config": "^2.0.0",
+    "@types/node": "10",
+    "node-sass": "^4.11.0",
+    "prettier": "^1.16.4",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^7.1.0",
+    "ts-loader": "^5.3.3",
+    "tslint": "^5.14.0",
+    "tslint-config-gluons": "^2.1.0",
+    "typescript": "^3.3.3333",
+    "webpack": "^4.29.6"
+  }
+}
