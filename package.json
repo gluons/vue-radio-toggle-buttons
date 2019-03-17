@@ -26,6 +26,7 @@
   "devDependencies": {
     "@gluons/prettier-config": "^2.0.0",
     "@types/node": "10",
+    "browserslist-config-vue": "^1.0.3",
     "gridsome-plugin-pug": "^0.0.3",
     "gridsome-plugin-ts": "^0.0.2",
     "node-sass": "^4.11.0",

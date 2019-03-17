@@ -5,6 +5,7 @@ dependencies:
 devDependencies:
   '@gluons/prettier-config': 2.0.0
   '@types/node': 10.14.1
+  browserslist-config-vue: 1.0.3
   gridsome-plugin-pug: 0.0.3
   gridsome-plugin-ts: 0.0.2
   node-sass: 4.11.0
@@ -1650,6 +1651,10 @@ packages:
       pako: 1.0.10
     resolution:
       integrity: sha512-Z942RysHXmJrhqk88FmKBVq/v5tqmSkDz7p54G/MGyjMnCFFnC79XWNbg+Vta8W6Wb2qtSZTSxIGkJrRpCFEiA==
+  /browserslist-config-vue/1.0.3:
+    dev: true
+    resolution:
+      integrity: sha512-+hnBOn3UUJhJ0kddg6MNajSoyxdwREZuqYwUIwAjDqZ8Emk3SGIFc1Dtw2X9IZMV0Zv36RFYeF77q6kjrAioCw==
   /browserslist/4.5.0:
     dependencies:
       caniuse-lite: 1.0.30000949
@@ -8463,6 +8468,7 @@ packages:
 specifiers:
   '@gluons/prettier-config': ^2.0.0
   '@types/node': '10'
+  browserslist-config-vue: ^1.0.3
   gridsome: ^0.5.5
   gridsome-plugin-pug: ^0.0.3
   gridsome-plugin-ts: ^0.0.2
