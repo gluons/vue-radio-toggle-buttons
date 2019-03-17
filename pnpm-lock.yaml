@@ -5,10 +5,10 @@ dependencies:
 devDependencies:
   '@gluons/prettier-config': 2.0.0
   '@types/node': 10.14.1
+  gridsome-plugin-pug: 0.0.2
   node-sass: 4.11.0
   prettier: 1.16.4
   pug: 2.0.3
-  pug-plain-loader: 1.0.0
   sass-loader: 7.1.0
   ts-loader: 5.3.3
   tslint: 5.14.0
@@ -3747,6 +3747,16 @@ packages:
       node: '>= 6.x'
     resolution:
       integrity: sha512-C5zDzLqvfPAgTtP8AUPIt9keDabrdRAqSWjj2OPRKrKxI9Fb65I36s1uCs1UUBFnSWTdO7hyHi7z1ZbwKMKF6Q==
+  /gridsome-plugin-pug/0.0.2:
+    dependencies:
+      pug-loader: 2.4.0
+      pug-plain-loader: 1.0.0
+    dev: true
+    peerDependencies:
+      gridsome: '*'
+      pug: '2'
+    resolution:
+      integrity: sha512-FxRsrwOem7XnuVwiHSE40trhiE4uS6ZT7L4c+GDEKJyCEXgbdAV8m/O6jKniy8TnCDZLTJL7L/6owxS5bYI/sw==
   /gridsome/0.5.5:
     dependencies:
       '@babel/core': 7.3.4
@@ -6469,6 +6479,16 @@ packages:
     dev: true
     resolution:
       integrity: sha1-5kjlftET/iwfRdV4WOorrWvAFSc=
+  /pug-loader/2.4.0:
+    dependencies:
+      loader-utils: 1.2.3
+      pug-walk: 1.1.7
+      resolve: 1.10.0
+    dev: true
+    peerDependencies:
+      pug: ^2.0.0
+    resolution:
+      integrity: sha512-cD4bU2wmkZ1EEVyu0IfKOsh1F26KPva5oglO1Doc3knx8VpBIXmFHw16k9sITYIjQMCnRv1vb4vfQgy7VdR6eg==
   /pug-parser/5.0.0:
     dependencies:
       pug-error: 1.3.2
@@ -8434,10 +8454,10 @@ specifiers:
   '@gluons/prettier-config': ^2.0.0
   '@types/node': '10'
   gridsome: ^0.5.5
+  gridsome-plugin-pug: ^0.0.2
   node-sass: ^4.11.0
   prettier: ^1.16.4
   pug: ^2.0.3
-  pug-plain-loader: ^1.0.0
   sass-loader: ^7.1.0
   ts-loader: ^5.3.3
   tslint: ^5.14.0

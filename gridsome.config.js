@@ -6,12 +6,6 @@ module.exports = {
 			.prepend('.ts');
 
 		config.module
-			.rule('pug')
-				.test(/\.pug$/)
-				.use('pug')
-					.loader('pug-plain-loader')
-					.end()
-				.end()
 			.rule('ts')
 				.test(/\.ts$/)
 				.use('ts')
@@ -19,5 +13,10 @@ module.exports = {
 					.options({
 						appendTsSuffixTo: [/\.vue$/]
 					});
-	}
+	},
+	plugins: [
+		{
+			use: 'gridsome-plugin-pug'
+		}
+	]
 };

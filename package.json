@@ -26,10 +26,10 @@
   "devDependencies": {
     "@gluons/prettier-config": "^2.0.0",
     "@types/node": "10",
+    "gridsome-plugin-pug": "^0.0.2",
     "node-sass": "^4.11.0",
     "prettier": "^1.16.4",
     "pug": "^2.0.3",
-    "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.1.0",
     "ts-loader": "^5.3.3",
     "tslint": "^5.14.0",
