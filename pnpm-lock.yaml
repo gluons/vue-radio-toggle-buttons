@@ -5,7 +5,8 @@ dependencies:
 devDependencies:
   '@gluons/prettier-config': 2.0.0
   '@types/node': 10.14.1
-  gridsome-plugin-pug: 0.0.2
+  gridsome-plugin-pug: 0.0.3
+  gridsome-plugin-ts: 0.0.2
   node-sass: 4.11.0
   prettier: 1.16.4
   pug: 2.0.3
@@ -3747,7 +3748,7 @@ packages:
       node: '>= 6.x'
     resolution:
       integrity: sha512-C5zDzLqvfPAgTtP8AUPIt9keDabrdRAqSWjj2OPRKrKxI9Fb65I36s1uCs1UUBFnSWTdO7hyHi7z1ZbwKMKF6Q==
-  /gridsome-plugin-pug/0.0.2:
+  /gridsome-plugin-pug/0.0.3:
     dependencies:
       pug-loader: 2.4.0
       pug-plain-loader: 1.0.0
@@ -3756,7 +3757,16 @@ packages:
       gridsome: '*'
       pug: '2'
     resolution:
-      integrity: sha512-FxRsrwOem7XnuVwiHSE40trhiE4uS6ZT7L4c+GDEKJyCEXgbdAV8m/O6jKniy8TnCDZLTJL7L/6owxS5bYI/sw==
+      integrity: sha512-6obm8wXXJ9Dk7qqRcyXhGB8ylhdoQZReOXqiATePIzo3GnJfFH6M4H8A43V2WJXlYhW4EPHzqWCmWwSyIpnLBw==
+  /gridsome-plugin-ts/0.0.2:
+    dependencies:
+      ts-loader: 5.3.3
+    dev: true
+    peerDependencies:
+      gridsome: '*'
+      typescript: '*'
+    resolution:
+      integrity: sha512-5cBCChrVdnRRB0bkoar6SEwBV/ckoGkL1aKYhhIpaoQDkQ+HoGT6UECKbFibrQlsed01brcr80RqpdV82hgjGA==
   /gridsome/0.5.5:
     dependencies:
       '@babel/core': 7.3.4
@@ -8454,7 +8464,8 @@ specifiers:
   '@gluons/prettier-config': ^2.0.0
   '@types/node': '10'
   gridsome: ^0.5.5
-  gridsome-plugin-pug: ^0.0.2
+  gridsome-plugin-pug: ^0.0.3
+  gridsome-plugin-ts: ^0.0.2
   node-sass: ^4.11.0
   prettier: ^1.16.4
   pug: ^2.0.3
