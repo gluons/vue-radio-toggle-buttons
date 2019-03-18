@@ -1,6 +1,7 @@
 <template lang="pug">
 Layout: #home
-	p {{ text }}
+	header
+		h1.main-title #[V]ue Radio Toggle Buttons
 </template>
 
 <script lang="ts">
@@ -16,3 +17,13 @@ export default class Index extends Vue {
 	text: string = 'Hi';
 }
 </script>
+
+<style lang="scss">
+#home {
+	margin-top: 5rem;
+
+	.main-title {
+		text-align: center;
+	}
+}
+</style>

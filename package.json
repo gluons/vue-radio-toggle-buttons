@@ -20,7 +20,11 @@
   "homepage": "https://github.com/gluons/vue-radio-toggle-buttons",
   "dependencies": {
     "gridsome": "^0.5.5",
+    "highlight.js": "^9.15.6",
     "vue": "^2.6.9",
+    "vue-gh-corners": "^3.0.1",
+    "vue-github-buttons": "^3.0.1",
+    "vue-highlight.js": "^3.1.0",
     "vue-radio-toggle-buttons": "^0.0.2"
   },
   "devDependencies": {
