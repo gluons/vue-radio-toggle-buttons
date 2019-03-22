@@ -19,9 +19,10 @@
   },
   "homepage": "https://github.com/gluons/vue-radio-toggle-buttons",
   "dependencies": {
+    "core-js": "2",
     "gridsome": "^0.5.5",
     "highlight.js": "^9.15.6",
-    "vue": "^2.6.9",
+    "vue": "^2.6.10",
     "vue-gh-corners": "^3.0.1",
     "vue-github-buttons": "^3.0.1",
     "vue-highlight.js": "^3.1.0",
@@ -40,9 +41,9 @@
     "ts-loader": "^5.3.3",
     "tslint": "^5.14.0",
     "tslint-config-gluons": "^2.1.0",
-    "typescript": "^3.3.3333",
+    "typescript": "^3.3.4000",
     "vue-class-component": "^7.0.1",
-    "vue-property-decorator": "^8.0.0",
+    "vue-property-decorator": "^8.1.0",
     "webpack": "^4.29.6"
   }
 }
