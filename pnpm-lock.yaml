@@ -6,7 +6,7 @@ dependencies:
   vue-gh-corners: 3.0.1
   vue-github-buttons: 3.0.1
   vue-highlight.js: 3.1.0
-  vue-radio-toggle-buttons: 0.0.2
+  vue-radio-toggle-buttons: 0.0.3
 devDependencies:
   '@gluons/prettier-config': 2.0.0
   '@types/node': 10.14.2
@@ -8271,14 +8271,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-TUWpbadApSW/sx9hlbrUq092ULm4E3RkL5X4fFhkiJ88/Y99lVubjh3bd3VbFQ8JRlKaTeqMOKaFHQRzWBCFPg==
-  /vue-radio-toggle-buttons/0.0.2:
+  /vue-radio-toggle-buttons/0.0.3:
     dependencies:
       color: 3.1.0
     dev: false
     peerDependencies:
       vue: '2'
     resolution:
-      integrity: sha512-oaFXbQkSpzQjHSIuwb9vgv7XdhsZ9GI7DsvABc2JXbDRKO9dppNbpJA2Qhqeb+zqeDSCJqZSvnG/kbndJ3hqgg==
+      integrity: sha512-u6+CeV1Q1b6LkNUZrnyJ0TVlINcEVMy3h9HiT/2lSTYoXdWG7jvlAbcPJIJF84Gmi9pXqSCtmzOyqydZBXR8PQ==
   /vue-router/3.0.2:
     dev: false
     resolution:
@@ -8583,5 +8583,5 @@ specifiers:
   vue-github-buttons: ^3.0.1
   vue-highlight.js: ^3.1.0
   vue-property-decorator: ^8.1.0
-  vue-radio-toggle-buttons: ^0.0.2
+  vue-radio-toggle-buttons: ^0.0.3
   webpack: ^4.29.6
