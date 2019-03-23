@@ -24,7 +24,7 @@ export default class V extends Vue {}
 	height: 2em;
 	margin-right: -0.25em;
 
-	::selection {
+	&::selection {
 		color: initial !important;
 	}
 }

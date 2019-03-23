@@ -1,5 +1,9 @@
 <template lang="pug">
 #app
+	github-corners(
+		repo='gluons/vue-radio-toggle-buttons'
+		bg-color='deeppink'
+	)
 	slot
 </template>
 
