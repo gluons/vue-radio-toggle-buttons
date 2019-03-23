@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "8"
+before_install:
+  - curl -L https://unpkg.com/@pnpm/self-installer | node
+install:
+  - pnpm install
+script: pnpm run build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: docs
+  local_dir: ./dist/
