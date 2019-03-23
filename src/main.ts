@@ -13,9 +13,9 @@ import { registerComponents } from '@/components';
 import Layout from '@/layouts/Default.vue';
 
 import 'highlight.js/styles/dracula.css';
-import 'vue-gh-corners/dist/vue-github-corners.iife.css';
-import 'vue-github-buttons/dist/vue-github-buttons.css';
-import 'vue-radio-toggle-buttons/dist/vue-radio-toggle-buttons.css';
+import '../node_modules/vue-gh-corners/dist/vue-github-corners.iife.css';
+import '../node_modules/vue-github-buttons/dist/vue-github-buttons.css';
+import '../node_modules/vue-radio-toggle-buttons/dist/vue-radio-toggle-buttons.css';
 
 import '@/scss/main.scss';
 
