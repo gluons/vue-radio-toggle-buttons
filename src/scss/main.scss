@@ -40,7 +40,8 @@ hr.divider {
 }
 
 .hljs {
-	&::selection, ::selection {
+	&::selection,
+	::selection {
 		color: $code-selection-color;
 		background-color: $code-selection-bg-color;
 	}
