@@ -22,13 +22,14 @@ Layout: #home
 				yarn add vue-radio-toggle-buttons
 		section
 			h2 Demo
-			p
-				RadioToggleButtons(
-					v-model='currentValue'
-					:values='values'
-					color='purple'
-				)
-			p.result {{ selectedItemLabel }}
+			.demo-container
+				.radio-btns
+					RadioToggleButtons(
+						v-model='currentValue'
+						:values='values'
+						color='purple'
+					)
+				.result {{ selectedItemLabel }}
 </template>
 
 <script lang="ts">
@@ -85,16 +86,27 @@ export default class Index extends Vue {
 			margin: 0 1em;
 		}
 	}
-	.result {
-		margin: 2rem 0;
-		padding: 1rem;
+	.demo-container {
 		border: 0.25rem dotted deeppink;
 		border-radius: 0.25rem;
+		padding: 2rem;
 
-		&::before {
-			content: 'Selected Item:';
-			font-weight: bold;
-			margin-right: 0.5rem;
+		& > * + * {
+			margin-top: 2rem;
+		}
+		.radio-btns {
+			display: flex;
+			justify-content: center;
+		}
+		.result {
+			display: flex;
+			justify-content: center;
+
+			&::before {
+				content: 'Selected Item:';
+				font-weight: bold;
+				margin-right: 0.5rem;
+			}
 		}
 	}
 }
