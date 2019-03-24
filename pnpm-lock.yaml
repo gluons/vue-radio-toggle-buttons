@@ -1,6 +1,7 @@
 dependencies:
   color: 3.1.0
   core-js: 2.6.5
+  epic-spinners: 1.0.4
   gridsome: 0.5.5
   highlight.js: 9.15.6
   randomcolor: 0.5.4
@@ -2945,6 +2946,15 @@ packages:
     dev: false
     resolution:
       integrity: sha512-f2LZMYl1Fzu7YSBKg+RoROelpOaNrcGmE9AZubeDfrCEia483oW4MI4VyFd5VNHIgQ/7qm1I0wUHK1eJnn2y2w==
+  /epic-spinners/1.0.4:
+    dev: false
+    engines:
+      node: '>= 4.0.0'
+      npm: '>= 3.0.0'
+    peerDependencies:
+      vue: ^2.5.2
+    resolution:
+      integrity: sha512-oCcAN0/GrAlERMYBaMpjEQCfaqUyyAGZnHv8jad9W2EwKrxeGCRp4sjKezGB/m+quJ8ZWGNQZKHiCAA1GSUWJw==
   /errno/0.1.7:
     dependencies:
       prr: 1.0.1
@@ -8596,6 +8606,7 @@ specifiers:
   color: ^3.1.0
   core-js: '2'
   cross-env: ^5.2.0
+  epic-spinners: ^1.0.4
   gridsome: ^0.5.5
   gridsome-plugin-pug: ^0.0.3
   gridsome-plugin-ts: ^0.0.2

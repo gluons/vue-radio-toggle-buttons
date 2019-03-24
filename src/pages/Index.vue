@@ -23,19 +23,27 @@ Layout: #home
 		section
 			h2 Demo
 			.demo-container
-				.radio-btns: ClientOnly
-					RadioToggleButtons(
-						v-model='currentValue'
-						:values='values'
-						:color='mainColor'
-						:textColor='textColors.textColors'
-						:selectedTextColor='textColors.selectedTextColor'
+				.loader(v-if='isLoading')
+					breeding-rhombus-spinner(
+						:animation-duration='1000'
+						:size='65'
+						color='deeppink'
 					)
-				.result {{ selectedItemLabel }}
+				ClientOnly(v-else)
+					.radio-btns
+						RadioToggleButtons(
+							v-model='currentValue'
+							:values='values'
+							:color='mainColor'
+							:textColor='textColors.textColors'
+							:selectedTextColor='textColors.selectedTextColor'
+						)
+					.result {{ selectedItemLabel }}
 </template>
 
 <script lang="ts">
 import Color from 'color';
+import { BreedingRhombusSpinner } from 'epic-spinners';
 import randomColor from 'randomcolor';
 import { Vue, Component } from 'vue-property-decorator';
 
@@ -43,11 +51,15 @@ const maxValue = 5;
 
 @Component({
 	name: 'Index',
+	components: {
+		BreedingRhombusSpinner
+	},
 	metaInfo: {
 		title: 'Home'
 	}
 } as any)
 export default class Index extends Vue {
+	isLoading = true;
 	values = [...Array(maxValue).keys()].map(i => ({
 		label: `Value ${i + 1}`,
 		value: `${i + 1}`
@@ -60,6 +72,11 @@ export default class Index extends Vue {
 
 		this.currentValue = `${randValue}`;
 		this.mainColor = randomColor();
+	}
+	mounted() {
+		setTimeout(() => {
+			this.isLoading = false;
+		}, 1000);
 	}
 
 	get textColors() {
@@ -114,14 +131,13 @@ export default class Index extends Vue {
 		& > * + * {
 			margin-top: 2rem;
 		}
-		.radio-btns {
+		.loader,
+		.radio-btns,
+		.result {
 			display: flex;
 			justify-content: center;
 		}
 		.result {
-			display: flex;
-			justify-content: center;
-
 			&::before {
 				content: 'Selected Item:';
 				font-weight: bold;
