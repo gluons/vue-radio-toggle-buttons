@@ -117,6 +117,7 @@ export default class Index extends Vue {
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
+			user-select: none;
 		}
 		.gh-button-container {
 			float: unset;
@@ -130,6 +131,9 @@ export default class Index extends Vue {
 
 		& > * + * {
 			margin-top: 2rem;
+		}
+		.radio-toggle-button {
+			user-select: none;
 		}
 		.loader,
 		.radio-btns,
