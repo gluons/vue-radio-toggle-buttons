@@ -23,7 +23,7 @@ Layout: #home
 		section
 			h2 Demo
 			.demo-container
-				.radio-btns
+				.radio-btns: ClientOnly
 					RadioToggleButtons(
 						v-model='currentValue'
 						:values='values'
