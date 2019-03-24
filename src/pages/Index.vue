@@ -40,7 +40,6 @@ import randomColor from 'randomcolor';
 import { Vue, Component } from 'vue-property-decorator';
 
 const maxValue = 5;
-const randValue = Math.floor(Math.random() * maxValue) + 1;
 
 @Component({
 	name: 'Index',
@@ -53,8 +52,15 @@ export default class Index extends Vue {
 		label: `Value ${i + 1}`,
 		value: `${i + 1}`
 	}));
-	currentValue = `${randValue}`;
-	mainColor = randomColor();
+	currentValue = '1';
+	mainColor = 'purple';
+
+	created() {
+		const randValue = Math.floor(Math.random() * maxValue) + 1;
+
+		this.currentValue = `${randValue}`;
+		this.mainColor = randomColor();
+	}
 
 	get textColors() {
 		const mainColor = Color(this.mainColor);
