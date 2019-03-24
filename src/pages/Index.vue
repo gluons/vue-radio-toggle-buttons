@@ -27,13 +27,20 @@ Layout: #home
 					RadioToggleButtons(
 						v-model='currentValue'
 						:values='values'
-						color='purple'
+						:color='mainColor'
+						:textColor='textColors.textColors'
+						:selectedTextColor='textColors.selectedTextColor'
 					)
 				.result {{ selectedItemLabel }}
 </template>
 
 <script lang="ts">
+import Color from 'color';
+import randomColor from 'randomcolor';
 import { Vue, Component } from 'vue-property-decorator';
+
+const maxValue = 5;
+const randValue = Math.floor(Math.random() * maxValue) + 1;
 
 @Component({
 	name: 'Index',
@@ -42,15 +49,22 @@ import { Vue, Component } from 'vue-property-decorator';
 	}
 } as any)
 export default class Index extends Vue {
-	values = [
-		{ label: 'Value 1', value: '1' },
-		{ label: 'Value 2', value: '2' },
-		{ label: 'Value 3', value: '3' },
-		{ label: 'Value 4', value: '4' },
-		{ label: 'Value 5', value: '5' }
-	];
-	currentValue = '1';
+	values = [...Array(maxValue).keys()].map(i => ({
+		label: `Value ${i + 1}`,
+		value: `${i + 1}`
+	}));
+	currentValue = `${randValue}`;
+	mainColor = randomColor();
 
+	get textColors() {
+		const mainColor = Color(this.mainColor);
+		const isDark = mainColor.isDark();
+
+		return {
+			textColor: isDark ? '#333' : '#eee',
+			selectedTextColor: isDark ? '#eee' : '#333'
+		};
+	}
 	get selectedItemLabel() {
 		const selectedItem = this.values.find(
 			({ value }) => value === this.currentValue

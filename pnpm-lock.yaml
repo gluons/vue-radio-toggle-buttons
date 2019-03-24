@@ -1,7 +1,9 @@
 dependencies:
+  color: 3.1.0
   core-js: 2.6.5
   gridsome: 0.5.5
   highlight.js: 9.15.6
+  randomcolor: 0.5.4
   vue: 2.6.10
   vue-gh-corners: 3.0.1
   vue-github-buttons: 3.0.1
@@ -9,7 +11,9 @@ dependencies:
   vue-radio-toggle-buttons: 0.0.3
 devDependencies:
   '@gluons/prettier-config': 2.0.0
+  '@types/color': 3.0.0
   '@types/node': 10.14.2
+  '@types/randomcolor': 0.5.1
   browserslist-config-vue: 1.0.3
   cross-env: 5.2.0
   gridsome-plugin-pug: 0.0.3
@@ -839,6 +843,22 @@ packages:
     dev: true
     resolution:
       integrity: sha512-xH2e58elpj1X4ynnKp9qSnWlsRTIs6n3tgLGNfwAGHwePw0mulHQllV34n0T25uYSu1k0hRKkWXF890B1yS47w==
+  /@types/color-convert/1.9.0:
+    dependencies:
+      '@types/color-name': 1.1.1
+    dev: true
+    resolution:
+      integrity: sha512-OKGEfULrvSL2VRbkl/gnjjgbbF7ycIlpSsX7Nkab4MOWi5XxmgBYvuiQ7lcCFY5cPDz7MUNaKgxte2VRmtr4Fg==
+  /@types/color-name/1.1.1:
+    dev: true
+    resolution:
+      integrity: sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
+  /@types/color/3.0.0:
+    dependencies:
+      '@types/color-convert': 1.9.0
+    dev: true
+    resolution:
+      integrity: sha512-5qqtNia+m2I0/85+pd2YzAXaTyKO8j+svirO5aN+XaQJ5+eZ8nx0jPtEWZLxCi50xwYsX10xUHetFzfb1WEs4Q==
   /@types/events/3.0.0:
     dev: false
     resolution:
@@ -862,6 +882,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
+  /@types/randomcolor/0.5.1:
+    dev: true
+    resolution:
+      integrity: sha512-Gnft9MmPR4LS7R/eHTHjZgYB0B/nHl7TNdCANpRTjipu2smRbSFQd5npcfLJqNzK29ao23no1Mp3GMDvEsabmw==
   /@vue/babel-helper-vue-jsx-merge-props/1.0.0-beta.3:
     dev: false
     resolution:
@@ -6672,6 +6696,10 @@ packages:
       safe-buffer: 5.1.2
     resolution:
       integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==
+  /randomcolor/0.5.4:
+    dev: false
+    resolution:
+      integrity: sha512-nYd4nmTuuwMFzHL6W+UWR5fNERGZeVauho8mrJDUSXdNDbao4rbrUwhuLgKC/j8VCS5+34Ria8CsTDuBjrIrQA==
   /randomfill/1.0.4:
     dependencies:
       randombytes: 2.1.0
@@ -8561,8 +8589,11 @@ packages:
       integrity: sha512-fa+6aDUVvavYsefZw0zaZ/v3ckEtMgCFi30sn91SEZea4y/6jQp05E3omjkX91zV6RVdn15fqnFZ6RKjRGbp2g==
 specifiers:
   '@gluons/prettier-config': ^2.0.0
+  '@types/color': ^3.0.0
   '@types/node': '10'
+  '@types/randomcolor': ^0.5.1
   browserslist-config-vue: ^1.0.3
+  color: ^3.1.0
   core-js: '2'
   cross-env: ^5.2.0
   gridsome: ^0.5.5
@@ -8572,6 +8603,7 @@ specifiers:
   node-sass: ^4.11.0
   prettier: ^1.16.4
   pug: ^2.0.3
+  randomcolor: ^0.5.4
   sass-loader: ^7.1.0
   ts-loader: ^5.3.3
   tslint: ^5.14.0

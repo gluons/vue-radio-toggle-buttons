@@ -19,9 +19,11 @@
   },
   "homepage": "https://github.com/gluons/vue-radio-toggle-buttons",
   "dependencies": {
+    "color": "^3.1.0",
     "core-js": "2",
     "gridsome": "^0.5.5",
     "highlight.js": "^9.15.6",
+    "randomcolor": "^0.5.4",
     "vue": "^2.6.10",
     "vue-gh-corners": "^3.0.1",
     "vue-github-buttons": "^3.0.1",
@@ -30,7 +32,9 @@
   },
   "devDependencies": {
     "@gluons/prettier-config": "^2.0.0",
+    "@types/color": "^3.0.0",
     "@types/node": "10",
+    "@types/randomcolor": "^0.5.1",
     "browserslist-config-vue": "^1.0.3",
     "cross-env": "^5.2.0",
     "gridsome-plugin-pug": "^0.0.3",
