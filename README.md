@@ -25,6 +25,8 @@ import VueRadioToggleButtons from 'vue-radio-toggle-buttons';
 
 import App from './App.vue';
 
+import 'vue-radio-toggle-buttons/dist/vue-radio-toggle-buttons.css';
+
 Vue.use(VueRadioToggleButtons);
 
 new Vue({
