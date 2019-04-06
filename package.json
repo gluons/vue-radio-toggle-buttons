@@ -50,6 +50,7 @@
     "typescript": "^3.4.2",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.1.0",
-    "webpack": "^4.29.6"
+    "webpack": "^4.29.6",
+    "webpack-node-externals": "^1.7.2"
   }
 }
