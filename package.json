@@ -27,7 +27,7 @@
     "randomcolor": "^0.5.4",
     "vue": "^2.6.10",
     "vue-gh-corners": "^3.0.1",
-    "vue-github-buttons": "^3.0.1",
+    "vue-github-buttons": "^3.1.0",
     "vue-highlight.js": "^3.1.0",
     "vue-radio-toggle-buttons": "^0.0.4"
   },

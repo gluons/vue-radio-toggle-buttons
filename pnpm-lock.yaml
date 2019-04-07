@@ -7,7 +7,7 @@ dependencies:
   randomcolor: 0.5.4
   vue: 2.6.10
   vue-gh-corners: 3.0.1
-  vue-github-buttons: 3.0.1
+  vue-github-buttons: 3.1.0
   vue-highlight.js: 3.1.0
   vue-radio-toggle-buttons: 0.0.4
 devDependencies:
@@ -5367,6 +5367,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-OV8Bq1OrPh6z+Y4dqwo05HqrRL9YNF7QVMRfq1/pguwKLG+q9UB/Lk0x5qXjO23JjJg+/jqCHSTaG1P3tfKfuw==
+  /node-fetch/2.3.0:
+    dev: false
+    engines:
+      node: 4.x || >=6.0.0
+    resolution:
+      integrity: sha512-MOd8pV3fxENbryESLgVIeaGKrdl+uaYhCSSVkjeOb/31/njTpcis5aWfdqgNlHIrKOLRbMnfPINPOML2CIFeXA==
   /node-gyp/3.8.0:
     dependencies:
       fstream: 1.0.11
@@ -8243,15 +8249,16 @@ packages:
       vue: '2'
     resolution:
       integrity: sha512-7kGSwtagBIyfgKbvEwTrTHdP2DGHhl0Y3S+rYNEhYE1rJVDkN4AoqAeIe9GPYfwSkDqHViDk0MlzCZjgB8aypw==
-  /vue-github-buttons/3.0.1:
+  /vue-github-buttons/3.1.0:
     dependencies:
       format-thousands: 1.1.1
+      node-fetch: 2.3.0
       tslib: 1.9.3
     dev: false
     peerDependencies:
       vue: '2'
     resolution:
-      integrity: sha512-ZVSLV1zASqzczgK8+ktKkBl+0pr4flrk/eDkm1gHXXNsE79Y2C7V463D3nQwc3kC2/mpqScpUVIfFKcCgrJpxQ==
+      integrity: sha512-x0b9bdhP5xZOD5kQ9+nnCzvKqVyHb4moqN2l06mjYB/k2WRdW5jiAWlneUgoPFwPvcqM40vrTDXVvBrS0MMlEQ==
   /vue-highlight.js/3.1.0:
     dependencies:
       detect-indent: 5.0.0
@@ -8615,7 +8622,7 @@ specifiers:
   vue: ^2.6.10
   vue-class-component: ^7.0.2
   vue-gh-corners: ^3.0.1
-  vue-github-buttons: ^3.0.1
+  vue-github-buttons: ^3.1.0
   vue-highlight.js: ^3.1.0
   vue-property-decorator: ^8.1.0
   vue-radio-toggle-buttons: ^0.0.4
