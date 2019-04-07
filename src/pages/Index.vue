@@ -3,7 +3,7 @@ Layout: #home
 	header
 		h1.main-title #[V]ue Radio Toggle Buttons
 		p.desc Radio toggle buttons for Vue.
-		ClientOnly: .gh-btns
+		.gh-btns
 			gh-btns-star(
 				slug='gluons/vue-radio-toggle-buttons'
 				show-count
