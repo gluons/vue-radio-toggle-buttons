@@ -53,14 +53,14 @@ export default class Index extends Vue {
 		label: `Value ${i + 1}`,
 		value: `${i + 1}`
 	}));
-	currentValue = '1';
+	currentValue: string = null;
 	mainColor = 'purple';
 
 	mounted() {
 		const randValue = Math.floor(Math.random() * maxValue) + 1;
 
-		this.currentValue = `${randValue}`;
 		this.mainColor = randomColor();
+		this.currentValue = `${randValue}`;
 	}
 
 	get textColors() {
