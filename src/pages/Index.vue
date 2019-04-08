@@ -23,27 +23,19 @@ Layout: #home
 		section
 			h2 Demo
 			.demo-container
-				.loader(v-if='isLoading')
-					breeding-rhombus-spinner(
-						:animation-duration='1000'
-						:size='65'
-						color='deeppink'
+				.radio-btns
+					RadioToggleButtons(
+						v-model='currentValue'
+						:values='values'
+						:color='mainColor'
+						:textColor='textColors.textColors'
+						:selectedTextColor='textColors.selectedTextColor'
 					)
-				ClientOnly(v-else)
-					.radio-btns
-						RadioToggleButtons(
-							v-model='currentValue'
-							:values='values'
-							:color='mainColor'
-							:textColor='textColors.textColors'
-							:selectedTextColor='textColors.selectedTextColor'
-						)
-					.result {{ selectedItemLabel }}
+				.result {{ selectedItemLabel }}
 </template>
 
 <script lang="ts">
 import Color from 'color';
-import { BreedingRhombusSpinner } from 'epic-spinners';
 import randomColor from 'randomcolor';
 import { Vue, Component } from 'vue-property-decorator';
 
@@ -51,9 +43,6 @@ const maxValue = 5;
 
 @Component({
 	name: 'Index',
-	components: {
-		BreedingRhombusSpinner
-	},
 	metaInfo: {
 		title: 'Home'
 	}
@@ -67,16 +56,11 @@ export default class Index extends Vue {
 	currentValue = '1';
 	mainColor = 'purple';
 
-	created() {
+	mounted() {
 		const randValue = Math.floor(Math.random() * maxValue) + 1;
 
 		this.currentValue = `${randValue}`;
 		this.mainColor = randomColor();
-	}
-	mounted() {
-		setTimeout(() => {
-			this.isLoading = false;
-		}, 1000);
 	}
 
 	get textColors() {

@@ -18,8 +18,7 @@ module.exports = {
 		if (isServer) {
 			config.externals(nodeExternals({
 				whitelist: [
-					/\.css$/,
-					/epic-spinners/
+					/\.css$/
 				]
 			}));
 		}
