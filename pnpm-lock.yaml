@@ -5,7 +5,7 @@ devDependencies:
   '@babel/preset-env': 7.6.3_@babel+core@7.6.4
   '@babel/preset-typescript': 7.6.0_@babel+core@7.6.4
   '@gluons/prettier-config': 2.0.0_prettier@1.18.2
-  '@gluons/vue-up': 0.6.2_22c78fdfdb5ee388a240492bb5e4153a
+  '@gluons/vue-up': 0.6.3_22c78fdfdb5ee388a240492bb5e4153a
   '@types/color': 3.0.0
   '@types/jest': 24.0.18
   '@types/node': 8.10.54
@@ -848,7 +848,7 @@ packages:
       typescript: '*'
     resolution:
       integrity: sha512-gQrWuVdhkl/FAaRww/DL1bjIVI2DRUT21R5Mxy3DMZRMjDRCUuvQkT/bovxXKFjmK1dvWSXz1+r1aF/viDofrQ==
-  /@gluons/vue-up/0.6.2_22c78fdfdb5ee388a240492bb5e4153a:
+  /@gluons/vue-up/0.6.3_22c78fdfdb5ee388a240492bb5e4153a:
     dependencies:
       '@gluons/rollup-plugin-postcss-only': 2.0.0_postcss@7.0.18+rollup@1.23.1
       '@gluons/vue-pack-dev': 1.20.0_typescript@3.6.4
@@ -892,7 +892,7 @@ packages:
       vue: '2'
       vue-template-compiler: '2'
     resolution:
-      integrity: sha512-u/2at/Nb2T1+D5hV5ZmIlo2M47y27P6XS68h33GytlXpPgsHNWUsZbbobRCFKbERbIK16Rjqk8f2PYXOdAuUmA==
+      integrity: sha512-x6c6F8v3GdV+inN8hpDau5SC/E3ZkImRVAH45M8bNGVjV4DhdWkPgWGIvBST7RWTmwiIDc5h8R+maNVUhwpGbg==
   /@jest/console/24.9.0:
     dependencies:
       '@jest/source-map': 24.9.0
@@ -10154,7 +10154,7 @@ specifiers:
   '@babel/preset-env': ^7.4.3
   '@babel/preset-typescript': ^7.3.3
   '@gluons/prettier-config': ^2.0.0
-  '@gluons/vue-up': ^0.6.1
+  '@gluons/vue-up': ^0.6.3
   '@types/color': ^3.0.0
   '@types/jest': ^24.0.11
   '@types/node': '8'
