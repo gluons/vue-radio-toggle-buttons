@@ -2,6 +2,7 @@
 label.radio-toggle-button(
 	:class='classes'
 	:style='style'
+	@click='onClick'
 	@mouseover='onMouseOver'
 	@mouseout='onMouseOut'
 )
@@ -28,10 +29,16 @@ export default class RadioToggle extends Vue {
 	@Prop(String) color: string;
 	@Prop(String) textColor: string;
 	@Prop(String) selectedTextColor: string;
+	@Prop({ type: Boolean, default: false }) disabled: boolean;
 
 	currentValue: any = this.mValue; // Represent current value of all radio buttons in group
 	isHovered: boolean = false;
 
+	onClick(e) {
+		if (this.disabled) {
+			e.preventDefault();
+		}
+	}
 	onMouseOver() {
 		this.isHovered = true;
 	}
@@ -62,6 +69,7 @@ export default class RadioToggle extends Vue {
 			color,
 			textColor,
 			selectedTextColor,
+			disabled,
 			isHovered,
 			isSelected
 		} = this;
@@ -73,11 +81,11 @@ export default class RadioToggle extends Vue {
 			color: textColor
 		};
 
-		if (isHovered) {
+		if (!disabled && isHovered) {
 			styles.color = color;
 			styles.borderColor = color;
 		}
-		if (isSelected) {
+		if (!disabled && isSelected) {
 			styles.color = selectedTextColor;
 
 			if (isHovered) {
@@ -87,6 +95,12 @@ export default class RadioToggle extends Vue {
 				styles.backgroundColor = color;
 				styles.borderColor = color;
 			}
+		}
+		if (disabled) {
+			const disabledColor = '#bababa';
+
+			styles.color = disabledColor;
+			styles.cursor = 'no-drop';
 		}
 
 		return styles;
