@@ -8,6 +8,7 @@ span
 		:color='color'
 		:textColor='textColor'
 		:selectedTextColor='selectedTextColor'
+		:disabled='value.disabled'
 		@input='onInput'
 	)
 		| {{ value.label }}
@@ -16,14 +17,10 @@ span
 <script lang="ts">
 import { Vue, Component, Prop, Model } from 'vue-property-decorator';
 
+import RadioToggleValue from '../types/RadioToggleValue';
 import RadioToggle from './RadioToggle.vue';
 
 import isColor from '../lib/isColor';
-
-type RadioToggleValue = {
-	label: string;
-	value: string;
-};
 
 const defaultColor = '#333';
 const defaultTextColor = defaultColor;

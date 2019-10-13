@@ -3,6 +3,6 @@ node_js:
   - "lts/*"
   - "lts/carbon"
 before_install:
-  - curl -L https://unpkg.com/@pnpm/self-installer | node
+  - npm install -g pnpm
 install:
   - pnpm install

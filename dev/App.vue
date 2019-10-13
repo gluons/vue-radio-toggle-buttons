@@ -26,11 +26,12 @@ const preValues = ['a', 'b', 'c'];
 	name: 'App'
 })
 export default class App extends Vue {
-	values = preValues.map(value => ({
+	values = preValues.map((value, i) => ({
 		label: value.repeat(5).toUpperCase(),
-		value
+		value,
+		disabled: i === 1 // Disable 2nd button
 	}));
-	currentValue: string = 'b';
+	currentValue: string = 'c';
 	colors: string[] = randomColor({ count: 10 });
 
 	get selectedTextColors() {
