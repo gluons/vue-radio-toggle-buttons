@@ -54,7 +54,7 @@ export default {
 		return {
 			values: [
 				{ label: 'Value 1', value: '1' },
-				{ label: 'Value 2', value: '2' },
+				{ label: 'Value 2', value: '2', disabled: true },
 				{ label: 'Value 3', value: '3' },
 			],
 			currentValue: ''
@@ -71,10 +71,12 @@ export default {
 #### 🔰 Props
 
 ##### `values`
-**Type:** `Array<{ label: string, value: string }>`  
+**Type:** `Array<{ label: string, value: string, disabled: boolean }>`  
 **Required:** `true`
 
 Values of radio toggle buttons.
+
+> You can set `disabled` to `true` to disable that button.
 
 ##### `color`
 **Type:** `string`  
