@@ -73,17 +73,17 @@ export default {
 ### `color`
 **Type:** `string`
 
-Default primary color of radio toggle buttons.
+Global primary color of radio toggle buttons.
 
 ### `textColor`
 **Type:** `string`
 
-Default text color of radio toggle buttons.
+Global text color of radio toggle buttons.
 
 ### `selectedTextColor`
 **Type:** `string`
 
-Default text color of selected item of radio toggle buttons.
+Global text color of selected item of radio toggle buttons.
 
 ## 📚 API
 
