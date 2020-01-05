@@ -1,8 +1,10 @@
 language: node_js
 node_js:
   - "lts/*"
-  - "lts/carbon"
+  - "lts/dubnium"
 before_install:
   - npm install -g pnpm
 install:
   - pnpm install
+script:
+  - pnpm test
