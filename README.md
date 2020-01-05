@@ -27,7 +27,11 @@ import App from './App.vue';
 
 import 'vue-radio-toggle-buttons/dist/vue-radio-toggle-buttons.css';
 
-Vue.use(VueRadioToggleButtons);
+Vue.use(VueRadioToggleButtons, {
+	color: '#333',
+	textColor: '#333',
+	selectedTextColor: '#eee'
+});
 
 new Vue({
 	el: '#app',
@@ -64,11 +68,28 @@ export default {
 </script>
 ```
 
+## ⚙️ Plugin options
+
+### `color`
+**Type:** `string`
+
+Default primary color of radio toggle buttons.
+
+### `textColor`
+**Type:** `string`
+
+Default text color of radio toggle buttons.
+
+### `selectedTextColor`
+**Type:** `string`
+
+Default text color of selected item of radio toggle buttons.
+
 ## 📚 API
 
 ### `<RadioToggleButtons>`
 
-#### 🔰 Props
+#### Props
 
 ##### `values`
 **Type:** `Array<{ label: string, value: string, disabled: boolean }>`  

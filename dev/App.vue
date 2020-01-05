@@ -18,7 +18,7 @@
 <script lang="ts">
 import Color from 'color';
 import randomColor from 'randomcolor';
-import { Vue, Component } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
 
 const preValues = ['a', 'b', 'c'];
 

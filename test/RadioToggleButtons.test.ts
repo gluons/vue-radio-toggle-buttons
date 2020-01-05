@@ -18,10 +18,12 @@ describe('RadioToggleButtons', () => {
 	});
 
 	it('should contain expected props', () => {
+		const { vm }: { vm: any } = wrapper;
+
 		expect(wrapper.props('values')).toEqual(values);
-		expect(wrapper.props('color')).toEqual('purple');
-		expect(wrapper.props('textColor')).toEqual('#333');
-		expect(wrapper.props('selectedTextColor')).toEqual('#eee');
+		expect(vm.actualColor).toEqual('purple');
+		expect(vm.actualTextColor).toEqual('#333');
+		expect(vm.actualSelectedTextColor).toEqual('#eee');
 	});
 
 	it('should render expected DOM', () => {
